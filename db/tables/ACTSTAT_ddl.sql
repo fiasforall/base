@@ -5,4 +5,6 @@
 alter table ACTSTAT add constraint PK_ACTSTAT
     primary key (actstatid) 
     using index tablespace fias_idx;
-
+COMMENT ON TABLE actstat IS 'Справочник ФИАС: Статус актуальности';
+COMMENT on COLUMN actstat.actstatid IS 'Идентификатор статуса (ключ)';
+COMMENT on COLUMN actstat.name IS 'Наименование';
